@@ -1,5 +1,5 @@
 import './styles/DrumKeysPanel.css';
-import { DrumKey } from '.';
+import { DrumPad } from '.';
 
 const keys = [ 
      {value: 'Q'}, 
@@ -16,7 +16,13 @@ const keys = [
 const DrumKeysPanel = () => {
      return (
         <div className="drum-keys-panel">
-          { keys.map((key, index) => <DrumKey keyValue={ key.value } key={ key.value + index }/>)}
+          { keys.map((key, index) => 
+               <DrumPad 
+                    keyValue={ key.value } 
+                    key={ key.value + index }
+                    id={ key.value }
+               />)
+          }
         </div>
      )
 };
