@@ -1,0 +1,9 @@
+.drum-keys-panel {
+     background-color: rgb(126, 126, 126);
+     padding: 1rem;
+     border-radius: .5rem;
+     display: grid;
+     grid-template-columns: repeat(3 ,1fr);
+     grid-template-rows: repeat(3, 1fr);
+     gap: 1rem;
+}
