@@ -1,0 +1,7 @@
+.volume {
+     display: grid;
+     grid-template-columns: 10% 1fr 10%;
+     align-items: center;
+     justify-content: center;
+     gap: .5rem;
+}

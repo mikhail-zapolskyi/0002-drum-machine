@@ -3,3 +3,4 @@ export { default as ControlPanel } from './ControlPanel';
 export { default as DrumPad } from './DrumPad';
 export { default as DefaultfSwitch } from './DefaultfSwitch';
 export { default as Display } from './Display';
+export { default as Volume } from './Volume';
