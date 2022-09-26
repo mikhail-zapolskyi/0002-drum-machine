@@ -84,7 +84,7 @@ const DrumKeysPanel = () => {
      
      const handleDramPad = useCallback(e => {
           const { keyCode } = e;
-          
+
           const [clip] = AudioClips.filter(clip => {
                return clip.keyCode === keyCode
           });
