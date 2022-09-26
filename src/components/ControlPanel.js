@@ -1,27 +1,18 @@
-import { useState } from 'react';
 import './styles/ControlPanel.css'
 import { DefaultfSwitch, Display, Volume } from '.';
+import { useContext } from 'react';
+import { StateContext } from '../App';
 
 const ControlPanel = () => {
-     const [checkedPower, setCheckedPower] = useState(false);
-     const [checkedSound, setCheckedSound] = useState(false);
-     const [displayInfo, setDisplayInfo] = useState('Info Display');
-     const [volumeValue, setVolumeValue] = useState(50);
-
-     const handleChangePower = () => {
-          setCheckedPower(!checkedPower);
-          setDisplayInfo(!checkedPower ? 'Power ON' : "Power OFF")
-     }
-
-     const handleChangeSound = () => {
-          setCheckedSound(!checkedSound);
-          setDisplayInfo(!checkedSound ? 'Smooth Piano Kit' : "Heater Kit")
-     }
-     
-     const handleChangeVolume = (e) => {
-          setVolumeValue(e.target.value);
-          setDisplayInfo(`Volume: %${volumeValue}`)
-     }
+     const { 
+          checkedPower, 
+          checkedSound, 
+          displayInfo, 
+          volumeValue,
+          handleChangePower,
+          handleChangeSound,
+          handleChangeVolume
+     } = useContext(StateContext);
 
      return (
           <div className='control-panel'>

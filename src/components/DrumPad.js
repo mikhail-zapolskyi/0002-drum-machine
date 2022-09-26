@@ -1,8 +1,12 @@
 import './styles/DrumPad.css';
 
-const DrumPad = ({ keyValue }) => {
+const DrumPad = ({ name, keyValue, url, onClick, onKeyDown }) => {
+     
      return (
-          <div className='drum-pad'>{ keyValue }</div>
+          <button className='drum-pad' onClick={ onClick } id={ name }>
+               { keyValue }
+               <audio src={ url } className='clip' id={ keyValue } onKeyDown={ onKeyDown }/>
+          </button>
      )
 };
 
